@@ -14,6 +14,7 @@ router.post("/book/create/:userId",[body('name',"name should be at least 3 chara
 body('publication',"publication should be at least 5 characters").isLength({ min: 5 }),
 body('author',"author should be at least 3 characters").isLength({ min: 3 }),
 body('genre',"genre should be at least 3 characters").isLength({ min: 3 }),
+body('description',"desciption is required").isLength({ min: 1 }),
 body('isbn',"isbn is required").isLength({ min: 1 }),
 body('isbn',"isbn should be number").isNumeric(),
 
@@ -26,6 +27,7 @@ router.put("/book/:bookId/:userId",[body('name',"name should be at least 3 chara
 body('publication',"publication should be at least 5 characters").isLength({ min: 5 }),
 body('author',"author should be at least 3 characters").isLength({ min: 3 }),
 body('genre',"genre should be at least 3 characters").isLength({ min: 3 }),
+body('description',"desciption is required").isLength({ min: 1 }),
 body('isbn',"isbn is required").isLength({ min: 1 }),
 body('isbn',"isbn should be number").isNumeric(),
 

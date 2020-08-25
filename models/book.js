@@ -32,6 +32,10 @@ const bookSchema=new mongoose.Schema({
         
 
     },
+    description:{
+        type:String,
+        required:true
+    },
     creator: {
         type: ObjectId,
         ref: "User",
