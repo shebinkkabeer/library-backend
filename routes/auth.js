@@ -13,8 +13,8 @@ router.post("/signup",[
 ],signup)
 
 router.post("/signin",[
-    body('email',"email is required").isEmail(),
-    body('password',"password filed is required").isLength({ min: 1 }),
+    body('email',"check your email").isEmail(),
+    body('password',"password field is required").isLength({ min: 1 }),
 ],signin)
 
 router.get("/signout",signout)
