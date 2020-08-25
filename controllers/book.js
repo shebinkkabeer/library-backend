@@ -41,7 +41,7 @@ exports.getBook=(req,res)=>{
 
 exports.getAllBook=(req,res)=>{
     Book.find().exec((err,books)=>{
-        if(err){
+        if(err || !books){
             res.status(400).json({
                 error:"No Books Found"
             })

@@ -33,7 +33,7 @@ body('publication',"publication should be at least 5 characters").isLength({ min
 body('isbn',"isbn is required").isLength({ min: 1 }),                                    
 
 body('isbn',"isbn should be number").isNumeric(),
-
+body('stock',"stock should be number").isNumeric(),
 body('stock',"stock is required").isLength({ min: 1 }),
 
 
