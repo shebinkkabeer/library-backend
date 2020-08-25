@@ -18,11 +18,7 @@ body('isbn',"isbn is required").isLength({ min: 1 }),
 
 body('isbn',"isbn should be number").isNumeric(),
 
-<<<<<<< HEAD
 body('stock',"stock is required").isLength({ min: 1 }),
-=======
-body('description',"desciption is required").isLength({ min: 1 }),
->>>>>>> 40d7d69a2ea7f3cd86b9f79355d48f783ad7ce2b
 
 
 ],isSignedIn,isAuthenticated,isAdmin,createBook)
@@ -38,11 +34,7 @@ body('isbn',"isbn is required").isLength({ min: 1 }),
 
 body('isbn',"isbn should be number").isNumeric(),
 
-<<<<<<< HEAD
 body('stock',"stock is required").isLength({ min: 1 }),
-=======
-body('description',"desciption is required").isLength({ min: 1 }),
->>>>>>> 40d7d69a2ea7f3cd86b9f79355d48f783ad7ce2b
 
 
 ],isSignedIn,isAuthenticated,isAdmin,updateBook)
