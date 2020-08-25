@@ -65,7 +65,7 @@ exports.updateBook=(req,res)=>{
     book.genre=req.body.genre;
     book.isbn=req.body.isbn;
     book.publication=req.body.publication
-    book.description=req.body.description
+    book.stock=req.body.stock
 
     book.save((err,updatedBook)=>{
         if(err){

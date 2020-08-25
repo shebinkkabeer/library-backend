@@ -32,8 +32,8 @@ const bookSchema=new mongoose.Schema({
         
 
     },
-    description:{
-        type:String,
+    stock:{
+        type:Number,
         required:true
     },
     creator: {
