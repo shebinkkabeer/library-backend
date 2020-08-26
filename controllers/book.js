@@ -4,15 +4,16 @@ const { body, validationResult } = require('express-validator');
 
 exports.getBookById=(req,res,next,id)=>{
    Book.findById(id).exec((err,book)=>{
-       if(err){
-           res.status(400).json({
+       if(err || !book){
+          return res.status(400).json({
                error:"Book not found in DB"
            })
        }
        req.book=book;
+    next()
+
    })
 
-    next()
 
 }
 
