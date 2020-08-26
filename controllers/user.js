@@ -56,4 +56,10 @@ exports.addBook=(req,res)=>{
         res.json(book)
       }
   )}
+
+
+  exports.viewBook=(req,res)=>{
+    return res.json(req.profile.books)
+    
+  }
                
