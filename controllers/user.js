@@ -41,3 +41,19 @@ exports.updateUser=(req,res)=>{
         }
     )
 }
+
+exports.addBook=(req,res)=>{
+  User.findByIdAndUpdate(
+    {_id:req.profile._id},
+    {$push:{books:req.body}},
+    {new:true,useFindAndModify:false},
+    (err,book)=>{
+        if(err ||!book){
+            return res.status(400).json({
+                error:"Book not added to DB"
+            })
+        }
+        res.json(book)
+      }
+  )}
+               
